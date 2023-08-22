@@ -1,5 +1,10 @@
 import ContentComponent from './components/ContentComponent';
+import DemoBinding from './components/DemoBinding/DemoBinding';
 import DemoComponents from './components/DemoComponents';
+import DemoCss from './components/DemoCss/DemoCss';
+import DemoEvent from './components/DemoEvent/DemoEvent';
+import DemoSass from './components/DemoSass/DemoSass';
+import DemoState from './components/DemoState/DemoState';
 import FooterComponent from './components/FooterComponent';
 import HeaderComponent from './components/HeaderComponent';
 import HomeComponent from './components/HomeComponent';
@@ -10,13 +15,19 @@ function App() {
     <div className="App">
       {/* Hello BC49
       <DemoComponents /> */}
-      <HomeComponent />
+      {/* <HomeComponent />
       <HeaderComponent />
       <div className="row">
         <NavigationComponent />
         <ContentComponent />
       </div>
-      <FooterComponent />
+      <FooterComponent /> */}
+      {/* <DemoBinding /> */}
+      {/* <DemoEvent /> */}
+      {/* <h1 className="demo">Demo Css</h1>
+      <DemoCss /> */}
+      {/* <DemoSass /> */}
+      <DemoState />
     </div>
   );
 }
