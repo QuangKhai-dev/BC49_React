@@ -1,3 +1,5 @@
+import BaiTapDoiXe from './components/BaiTapDoiXe/BaiTapDoiXe';
+import BaiTapHienThiPhim from './components/BaiTapHienThiPhim/BaiTapHienThiPhim';
 import ContentComponent from './components/ContentComponent';
 import DemoBinding from './components/DemoBinding/DemoBinding';
 import DemoComponents from './components/DemoComponents';
@@ -27,7 +29,9 @@ function App() {
       {/* <h1 className="demo">Demo Css</h1>
       <DemoCss /> */}
       {/* <DemoSass /> */}
-      <DemoState />
+      {/* <DemoState /> */}
+      {/* <BaiTapDoiXe /> */}
+      <BaiTapHienThiPhim />
     </div>
   );
 }
