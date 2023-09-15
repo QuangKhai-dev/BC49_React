@@ -4,6 +4,7 @@ const stateXucXacReducer = {
   xucXac3: 5,
   nguoiDungChon: '',
   soBanThang: 0,
+  tongSoBanChoi: 0,
 };
 
 // tham số state đại diện cho các dữ liệu được lưu trên store
@@ -19,6 +20,8 @@ export const xucXacReducer = (state = stateXucXacReducer, action) => {
       const ketQua = xucXac1 + xucXac2 + xucXac3 >= 11 ? 'Tài' : 'Xỉu';
       // mang tổng giá trị đi đối chiếu với kết quả người dùng
       if (state.nguoiDungChon !== '') {
+        // cộng thêm 1 giá trị khi mà ng dùng đã chọn 1 cửa và bấm play game
+        newState.tongSoBanChoi += 1;
         if (state.nguoiDungChon === ketQua) {
           newState.soBanThang += 1;
         }

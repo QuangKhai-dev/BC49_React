@@ -20,7 +20,8 @@ class KetQua extends Component {
         </div>
         <div className="tongSoBan">
           <p>
-            Tổng số bàn chơi: <span className="text-primary">0</span>
+            Tổng số bàn chơi:{' '}
+            <span className="text-primary">{this.props.tongSoBanChoi}</span>
           </p>
         </div>
         <button className="btn btn-success" onClick={this.props.lacXiNgau}>
@@ -59,6 +60,7 @@ const mapStateToProps = (state) => {
   return {
     nguoiDungChon: state.xucXacReducer.nguoiDungChon,
     soBanThang: state.xucXacReducer.soBanThang,
+    tongSoBanChoi: state.xucXacReducer.tongSoBanChoi,
   };
 };
 // mapstatetoprops
