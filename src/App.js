@@ -5,6 +5,7 @@ import DemoBinding from './components/DemoBinding/DemoBinding';
 import DemoComponents from './components/DemoComponents';
 import DemoCss from './components/DemoCss/DemoCss';
 import DemoEvent from './components/DemoEvent/DemoEvent';
+import DemoReactForm from './components/DemoReactForm/DemoReactForm';
 import BaiTapDoXucXac from './components/DemoRedux/BaiTapDoXucXac/BaiTapDoXucXac';
 import DemoRedux from './components/DemoRedux/DemoRedux';
 import DemoSass from './components/DemoSass/DemoSass';
@@ -37,7 +38,8 @@ function App() {
       {/* <BaiTapHienThiPhim /> */}
       {/* <Shopping /> */}
       {/* <DemoRedux /> */}
-      <BaiTapDoXucXac />
+      {/* <BaiTapDoXucXac /> */}
+      <DemoReactForm />
     </div>
   );
 }

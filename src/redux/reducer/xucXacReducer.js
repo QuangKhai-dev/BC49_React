@@ -10,7 +10,7 @@ const stateXucXacReducer = {
 // tham số state đại diện cho các dữ liệu được lưu trên store
 // action đại diện cho các dispatch được phía giao diện đẩy lên nhằm thay đổi hoặc xử lí các dữ liệu đang có trên store
 export const xucXacReducer = (state = stateXucXacReducer, action) => {
-  console.log(action);
+  // console.log(action);
 
   // sử dụng switch case giúp bắt các trường hợp action được đẩy lên
   switch (action.type) {
