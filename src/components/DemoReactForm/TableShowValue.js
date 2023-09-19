@@ -27,7 +27,13 @@ export default class TableShowValue extends Component {
             </thead>
             <tbody class="table-group-divider">
               {this.props.listProduct.map((item, index) => {
-                return <ItemTable item={item} />;
+                return (
+                  <ItemTable
+                    handleDelete={this.props.handleDelete}
+                    item={item}
+                    handleGetValue={this.props.handleGetValue}
+                  />
+                );
               })}
             </tbody>
             <tfoot></tfoot>

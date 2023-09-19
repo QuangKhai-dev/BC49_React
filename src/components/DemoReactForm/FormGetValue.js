@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 
 export default class FormGetValue extends Component {
   render() {
-    console.log(this.props.value);
     // destrucuring
-    const { handleOnChange, value, handleSubmit } = this.props;
+    const {
+      handleOnChange,
+      value,
+      handleSubmit,
+      errorValue,
+      activeButton,
+      handleUpdate,
+    } = this.props;
     return (
       <div class="card text-start">
         <div className="card-header bg-dark p-4 text-warning">Product info</div>
@@ -23,7 +29,11 @@ export default class FormGetValue extends Component {
                     name="id"
                     placeholder="product Id"
                     value={value.id}
+                    data-check="kyTu"
                   />
+                  <p className="text-danger mt-1" id="id-noti">
+                    {errorValue.id}
+                  </p>
                 </div>
               </div>
               <div className="col-6">
@@ -39,6 +49,10 @@ export default class FormGetValue extends Component {
                     placeholder="image"
                     value={value.image}
                   />
+                  <p className="text-danger mt-1" id="image-noti">
+                    {' '}
+                    {errorValue.image}
+                  </p>
                 </div>
               </div>
               <div className="col-6">
@@ -54,6 +68,9 @@ export default class FormGetValue extends Component {
                     value={value.name}
                     onChange={handleOnChange}
                   />
+                  <p className="text-danger mt-1" id="name-noti">
+                    {errorValue.name}
+                  </p>
                 </div>
               </div>
               <div className="col-6">
@@ -67,11 +84,13 @@ export default class FormGetValue extends Component {
                     value={value.type}
                     onChange={handleOnChange}
                   >
-                    <option selected value="mobile">
-                      Mobile
-                    </option>
+                    <option value="">Chọn</option>
+                    <option value="mobile">Mobile</option>
                     <option value="desktop">Desktop</option>
                   </select>
+                  <p className="text-danger mt-1" id="type-noti">
+                    {errorValue.type}
+                  </p>
                 </div>
               </div>
               <div className="col-6">
@@ -86,7 +105,14 @@ export default class FormGetValue extends Component {
                     placeholder="product price"
                     value={value.price}
                     onChange={handleOnChange}
+                    // set một data-attribute giúp kiểm tra xem input này có cần validation là số hay không
+                    // cách tạo data attribute ta gọi từ khoá data-(tên)
+                    data-check="number"
                   />
+                  <p className="text-danger mt-1" id="price-noti">
+                    {' '}
+                    {errorValue.price}
+                  </p>
                 </div>
               </div>
               <div className="col-6">
@@ -102,14 +128,25 @@ export default class FormGetValue extends Component {
                     value={value.description}
                     onChange={handleOnChange}
                   />
+                  <p className="text-danger mt-1" id="desc-noti">
+                    {errorValue.description}
+                  </p>
                 </div>
               </div>
             </div>
             <div className="card-footer">
-              <button className="text-warning btn btn-dark px-4" type="submit">
+              <button
+                className="text-warning btn btn-dark px-4"
+                type="submit"
+                // disabled={activeButton}
+              >
                 Tạo
               </button>
-              <button className="btn btn-warning text-dark px-4 ms-3">
+              <button
+                type="button"
+                className="btn btn-warning text-dark px-4 ms-3"
+                onClick={handleUpdate}
+              >
                 Update
               </button>
             </div>

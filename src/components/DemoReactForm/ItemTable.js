@@ -15,8 +15,22 @@ export default class ItemTable extends Component {
         <td>{description}</td>
         <td>{type}</td>
         <td>
-          <button className="btn btn-danger">Xoá</button>
-          <button className="btn btn-primary ms-2">Edit</button>
+          <button
+            className="btn btn-danger"
+            onClick={() => {
+              this.props.handleDelete(id);
+            }}
+          >
+            Xoá
+          </button>
+          <button
+            onClick={() => {
+              this.props.handleGetValue(id);
+            }}
+            className="btn btn-primary ms-2"
+          >
+            Edit
+          </button>
         </td>
       </tr>
     );
